@@ -1,0 +1,16 @@
+create database mpParking;
+
+use mpParking;
+
+create table tipoVeh(idTipoVeh int auto_increment, tipoVeh varchar(50) not null, primary key (idTipoVeh));
+create table usuarios(idUsuario int auto_increment, usuario varchar(50) not null, contra varchar(255) not null, habilitado tinyint not null, primary key (idUsuario), unique key (usuario));
+create table tipoTar(idTipoTar int auto_increment, tarifa varchar(50) not null, primary key (idTipoTar), unique key(tarifa));
+create table campos(idTipoVeh int not null, cantidad int not null, disponibles int not null, primary key(idTipoVeh), foreign key (idTipoVeh) references tipoVeh(idTipoVeh) on update cascade on delete cascade);
+create table marca(idMarca int auto_increment, idTipoVeh int not null, marca varchar(255) not null, primary key(idMarca), foreign key(idTipoVeh) references tipoVeh(idTipoVeh) on update cascade on delete cascade);
+
+create table tarifa(idTipoTar int not null, idTipoVeh int not null, valorTarifa dec(15,2) not null, primary key(idTipoTar,idTipoVeh), foreign key(idTipoTar) references tipoTar(idTipoTar) on update cascade on delete cascade, foreign key(idTipoVeh) references tipoVeh(idTipoVeh) on update cascade on delete cascade);
+
+create table recibo (idRecibo int auto_increment, idVeh varchar(50) not null, idUsuario int not null, idTipoTar int not null, idTipoVeh int not null, fechaEntrada date not null, horaEntrada time not null, idMarca int , idCliente int(20), primary key(idRecibo), foreign key(idUsuario) references usuarios(idUsuario) on update cascade on delete cascade, foreign key(idTipoTar) references tipoTar(idTipoTar) on update cascade on delete cascade, foreign key(idTipoVeh) references tipoVeh(idTipoVeh) on update cascade on delete cascade, foreign key(idMarca) references marca(idMarca) on update cascade on delete cascade);
+
+create table factura(idFactura int auto_increment, idRecibo int, idUsuario int not null, fechaSalida date not null, horaSalida time not null, subtotal dec(15,2) not null, iva dec(15,2) not null, total dec(15,2) not null, primary key(idFactura),unique key(idRecibo), foreign key (idRecibo) references recibo(idRecibo) on update cascade on delete cascade, foreign key(idUsuario) references usuarios(idUsuario) on update cascade on delete cascade);
+
