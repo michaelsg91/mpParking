@@ -1,0 +1,13 @@
+insert into tipoVeh(tipoVeh) values ('Automovil'),('Motocicleta');
+
+insert into marca(idTipoVeh, marca) values (1,'Audi'),(1,'BMW'),(1,'Chevrolet'),(1,'Citroen'),(1,'Daihatsu'),(1,'Dodge'),(1,'Fiat'),(1,'Ford'),(1,'Honda'),(1,'Hyundai'),(1,'Jeep'),(1,'Kia'),(1,'Mazda'),(1,'Mercedez-Benz'),(1,'Mini'),(1,'Mitsubishi'),(1,'Nissan'),(1,'Peugeot'),(1,'Porsche'),(1,'Renault'),(1,'Seat'),(1,'Skoda'),(1,'SsangYoung'),(1,'Subaru'),(1,'Toyota'),(1,'Volkswagen'),(2,'AKT'),(2,'Bajaj'),(2,'Honda'),(2,'Kawasaki'),(2,'Keeway'),(2,'KTM'),(2,'Kymco'),(2,'LML'),(2,'Piaggio'),(2,'Sachs'),(2,'Suzuki'),(2,'TVS'),(2,'United Motors'),(2,'Yamaha');
+
+insert into usuarios(usuario,contra,habilitado) values('admin','12345',1);
+
+insert into tipoTar(tarifa) values ('minuto'),('hora');
+
+insert into tarifa (idTipoTar,idTipoVeh,valorTarifa) values (1,1,105),(1,2,74),(2,1,5000),(2,2,4000);
+
+
+insert into campos(idTipoVeh,cantidad,disponibles) values (1,20,20),(2,10,10);
+
