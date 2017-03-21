@@ -15,7 +15,7 @@ public class jpanelMenu extends JPanel{
 		recibo=new JButton("Recibo");
 		factura=new JButton("Factura");
 		ingresos=new JButton("Ingresos");
-		cambUsu=new JButton("Cambiar Usuarios");
+		cambUsu=new JButton("Cambiar Usuario");
 		confTar=new JButton("Tarifa");
 		confUsu=new JButton("Usuarios");
 		confCamp=new JButton("Campos");

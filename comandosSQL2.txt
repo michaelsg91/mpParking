@@ -11,3 +11,6 @@ insert into tarifa (idTipoTar,idTipoVeh,valorTarifa) values (1,1,105),(1,2,74),(
 
 insert into campos(idTipoVeh,cantidad,disponibles) values (1,20,20),(2,10,10);
 
+alter table usuarios add column enLinea tinyint;
+
+update usuarios set enLinea=0;
