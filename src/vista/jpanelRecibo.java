@@ -65,6 +65,8 @@ public class jpanelRecibo extends JPanel implements Runnable{
 		nfentrada.setBounds(335,210,140,30);
 		fentrada.setBounds(335,240,140,30);
 		
+		ok.setBounds(240,320,60,30);
+		
 		
 		nhentrada.setHorizontalAlignment(JLabel.CENTER);
 		hentrada.setHorizontalAlignment(JLabel.CENTER);
@@ -75,7 +77,7 @@ public class jpanelRecibo extends JPanel implements Runnable{
 		hilo.start();
 		
 		add(nplaca);add(ntipoveh);add(ntarifa);add(placa);add(tipoveh);add(tarifa);add(ncliente);add(nmarca);add(cliente);add(marca);
-		add(nhentrada);add(hentrada);add(nfentrada);add(fentrada);add(opcional);
+		add(nhentrada);add(hentrada);add(nfentrada);add(fentrada);add(opcional);add(ok);
 	}
 	
 	public void fechahora(){
@@ -86,6 +88,16 @@ public class jpanelRecibo extends JPanel implements Runnable{
 	 }
 	
 	public void run(){
-		
+		Thread ct=Thread.currentThread();
+		 while(ct==hilo){
+			 fechahora();
+			 hentrada.setText(sm2.format(fecha)); 
+			 fentrada.setText(sm.format(fecha));
+			 try{
+				 Thread.sleep(1000);
+			 }catch(InterruptedException e){
+				 e.printStackTrace();
+			 }
+		 }
 	}
 }
