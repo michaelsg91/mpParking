@@ -7,7 +7,7 @@ public class jpanelCampos extends JPanel{
 	public JLabel automo,motoci,cantmot,cantcarr;
 	public jpanelCampos(){
 		//--- Panel properties --------------------
-		setPreferredSize(new Dimension(230,120));
+		setPreferredSize(new Dimension(635,60));
 		setLayout(null);
 		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Campos Disponibles"));
 		
@@ -18,10 +18,11 @@ public class jpanelCampos extends JPanel{
 		cantcarr=new JLabel("20");
 		
 		//--- Location elements -------------
-		automo.setBounds(30,30,100,30);
-		motoci.setBounds(30,70,100,30);
-		cantcarr.setBounds(160,30,80,30);
-		cantmot.setBounds(160,70,80,30);
+		automo.setBounds(30,20,100,20);
+		cantcarr.setBounds(160,20,100,20);
+		
+		motoci.setBounds(290,20,100,20);
+		cantmot.setBounds(420,20,100,20);
 		
 		
 		add(automo);add(motoci);add(cantcarr);add(cantmot);

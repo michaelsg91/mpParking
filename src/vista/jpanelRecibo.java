@@ -17,7 +17,7 @@ public class jpanelRecibo extends JPanel implements Runnable{
 	private SimpleDateFormat sm,sm2;
 	public jpanelRecibo(){
 		//--- Panel properties --------------------
-		setPreferredSize(new Dimension(540,480));
+		setPreferredSize(new Dimension(560,360));
 		setLayout(null);
 		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Registro de ingresos"));
 		
@@ -44,28 +44,28 @@ public class jpanelRecibo extends JPanel implements Runnable{
 		hilo=new Thread(this);
 		
 		//--- Location elements -------------
-		nplaca.setBounds(30,30,120,30);
-		ntipoveh.setBounds(30,80,120,30);
-		ntarifa.setBounds(30,130,120,30);
+		nplaca.setBounds(20,30,120,30);
+		ntipoveh.setBounds(20,80,120,30);
+		ntarifa.setBounds(20,130,120,30);
 
-		placa.setBounds(160,30,120,30);
-		tipoveh.setBounds(160,80,120,30);
-		tarifa.setBounds(160,130,120,30);
+		placa.setBounds(150,30,150,30);
+		tipoveh.setBounds(150,80,150,30);
+		tarifa.setBounds(150,130,150,30);
 		
-		opcional.setBounds(310,30,150,30);
-		ncliente.setBounds(310,80,90,30);
-		nmarca.setBounds(310,130,90,30);
-		cliente.setBounds(390,80,120,30);
-		marca.setBounds(390,130,120,30);
+		opcional.setBounds(320,30,150,30);
+		ncliente.setBounds(320,80,90,30);
+		nmarca.setBounds(320,130,90,30);
+		cliente.setBounds(390,80,150,30);
+		marca.setBounds(390,130,150,30);
 		
 		
-		nhentrada.setBounds(65,210,140,30);
-		hentrada.setBounds(65,240,140,30);
+		nhentrada.setBounds(70,210,140,30);
+		hentrada.setBounds(70,240,140,30);
 		
-		nfentrada.setBounds(335,210,140,30);
-		fentrada.setBounds(335,240,140,30);
+		nfentrada.setBounds(340,210,140,30);
+		fentrada.setBounds(340,240,140,30);
 		
-		ok.setBounds(240,320,60,30);
+		ok.setBounds(250,300,60,30);
 		
 		
 		nhentrada.setHorizontalAlignment(JLabel.CENTER);

@@ -10,7 +10,7 @@ public class jpanelIngresos extends JPanel{
 	public JButton ok;
 	public jpanelIngresos(){
 		//--- Panel properties --------------------
-		setPreferredSize(new Dimension(540,480));
+		setPreferredSize(new Dimension(560,360));
 		setLayout(null);
 		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Ingresos"));
 		
@@ -34,25 +34,25 @@ public class jpanelIngresos extends JPanel{
 		ok=new JButton("OK");
 		
 		//--- Location elements -------------
-		fechainicial.setBounds(50,30,150,30);
-		calendario1.setBounds(50, 80, 150, 30);
-		fechafinal.setBounds(220, 30, 150, 30);
-		calendario2.setBounds(220, 80, 150, 30);
+		fechainicial.setBounds(90,30,150,30);
+		calendario1.setBounds(90, 70, 150, 30);
+		fechafinal.setBounds(290, 30, 150, 30);
+		calendario2.setBounds(290, 70, 150, 30);
 		
-		nvehiculo.setBounds(50, 130, 150, 30);
-		vehiculo.setBounds(50, 180, 150, 30);
-		nplaca.setBounds(220, 130, 150, 30);
-		placa.setBounds(220, 180, 150, 30);
+		nvehiculo.setBounds(90, 120, 150, 30);
+		vehiculo.setBounds(90, 160, 150, 30);
+		nplaca.setBounds(290, 120, 150, 30);
+		placa.setBounds(290, 160, 150, 30);
 		
-		nsubtotal.setBounds(50, 230, 150, 30);
-		subtotal.setBounds(50, 280, 150, 30);
-		niva.setBounds(220, 230, 150, 30);
-		iva.setBounds(220, 280, 150, 30);
+		nsubtotal.setBounds(50, 220, 150, 30);
+		subtotal.setBounds(50, 250, 150, 30);
+		niva.setBounds(220, 220, 150, 30);
+		iva.setBounds(220, 250, 150, 30);
 		
-		ntotal.setBounds(100, 330, 150, 30);
-		total.setBounds(100, 380, 150, 30);
+		ntotal.setBounds(390, 220, 150, 30);
+		total.setBounds(390, 250, 150, 30);
 		
-		ok.setBounds(100, 430, 60, 30);
+		ok.setBounds(250,300,60,30);
 		
 		add(calendario1);add(calendario2);add(fechafinal);add(fechainicial);add(ntotal);add(total);add(nvehiculo);add(vehiculo);
 		add(ok);add(nsubtotal);add(subtotal);add(niva);add(iva);add(nplaca);add(placa);

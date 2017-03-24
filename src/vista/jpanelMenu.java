@@ -7,7 +7,7 @@ public class jpanelMenu extends JPanel{
 	public JLabel configurar;
 	public jpanelMenu(){
 		//--- Panel properties --------------------
-		setPreferredSize(new Dimension(230,360));
+		setPreferredSize(new Dimension(195,360));
 		setLayout(null);
 		setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Menú Principal"));
 		
@@ -23,14 +23,14 @@ public class jpanelMenu extends JPanel{
 		configurar=new JLabel("Configurar");
 		
 		//--- Location elements -------------
-		recibo.setBounds(30,30,170,30);
-		factura.setBounds(30,70,170,30);
-		ingresos.setBounds(30,110,170,30);
-		cambUsu.setBounds(30,150,170,30);
-		configurar.setBounds(30,190,170,30);
-		confTar.setBounds(30,230,170,30);
-		confUsu.setBounds(30,270,170,30);
-		confCamp.setBounds(30,310,170,30);
+		recibo.setBounds(20,30,155,30);
+		factura.setBounds(20,70,155,30);
+		ingresos.setBounds(20,110,155,30);
+		cambUsu.setBounds(20,150,155,30);
+		configurar.setBounds(20,190,155,30);
+		confTar.setBounds(20,230,155,30);
+		confUsu.setBounds(20,270,155,30);
+		confCamp.setBounds(20,310,155,30);
 		
 		configurar.setHorizontalAlignment(JLabel.CENTER);
 		
