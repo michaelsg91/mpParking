@@ -9,6 +9,7 @@ public class marcoPrincipal extends JFrame{
 	private jpanelFactura jpFactura;
 	private jpanelIngresos jpIngresos;
 	private jpanelUsuario jpUsuario;
+	private jpanelTarCamp jpTarCamp;
 	public marcoPrincipal(){
 		jpMenu=new jpanelMenu();
 		jpCampos=new jpanelCampos();
@@ -16,7 +17,7 @@ public class marcoPrincipal extends JFrame{
 		jpFactura=new jpanelFactura();
 		jpIngresos=new jpanelIngresos();
 		jpUsuario=new jpanelUsuario();
-		
+		jpTarCamp=new jpanelTarCamp();
 			
 		setTitle("MP Parking");
 		setResizable(false);
@@ -33,14 +34,18 @@ public class marcoPrincipal extends JFrame{
 		pack();
 		add(jpUsuario,BorderLayout.CENTER);
 		pack();
+		add(jpTarCamp,BorderLayout.CENTER);
+		pack();
 		add(jpCampos,BorderLayout.SOUTH);
 		pack();
+		
 		
 		setLocationRelativeTo(null);
 		
 		jpRecibo.setVisible(false);
 		jpFactura.setVisible(false);
 		jpIngresos.setVisible(false);
-		//jpUsuario.setVisible(false);
+		jpUsuario.setVisible(false);
+		//jpTarCamp.setVisible(false);
 	}
 }

@@ -3,7 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class jpanelMenu extends JPanel{
-	public JButton recibo,factura,ingresos,cambUsu,confTar,confUsu,confCamp;
+	public JButton recibo,factura,ingresos,cambUsu,confTarCamp,confUsu,confCamp;
 	public JLabel configurar;
 	public jpanelMenu(){
 		//--- Panel properties --------------------
@@ -16,7 +16,7 @@ public class jpanelMenu extends JPanel{
 		factura=new JButton("Factura");
 		ingresos=new JButton("Ingresos");
 		cambUsu=new JButton("Cambiar Usuario");
-		confTar=new JButton("Tarifa");
+		confTarCamp=new JButton("Tarifa / Campos");
 		confUsu=new JButton("Usuarios");
 		confCamp=new JButton("Campos");
 		
@@ -28,13 +28,13 @@ public class jpanelMenu extends JPanel{
 		ingresos.setBounds(20,110,155,30);
 		cambUsu.setBounds(20,150,155,30);
 		configurar.setBounds(20,190,155,30);
-		confTar.setBounds(20,230,155,30);
+		confTarCamp.setBounds(20,230,155,30);
 		confUsu.setBounds(20,270,155,30);
 		confCamp.setBounds(20,310,155,30);
 		
 		configurar.setHorizontalAlignment(JLabel.CENTER);
 		
 		
-		add(recibo);add(factura);add(ingresos);add(cambUsu);add(configurar);add(confTar);add(confUsu);add(confCamp);
+		add(recibo);add(factura);add(ingresos);add(cambUsu);add(configurar);add(confTarCamp);add(confUsu);//add(confCamp);
 	}
 }
