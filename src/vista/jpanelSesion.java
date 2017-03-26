@@ -5,6 +5,7 @@ import javax.swing.*;
 
 public class jpanelSesion extends JPanel{
 	private JLabel nusuario,ncontra,sesion;
+	public JLabel mensaje;
 	public JTextField usuario;
 	public JPasswordField contra;
 	public JButton ok;
@@ -17,6 +18,7 @@ public class jpanelSesion extends JPanel{
 		nusuario=new JLabel("Usuario");
 		ncontra=new JLabel("Contraseña");
 		sesion=new JLabel("Iniciar como:");
+		mensaje=new JLabel("");
 		
 		usuario=new JTextField();
 		contra=new JPasswordField();
@@ -28,8 +30,12 @@ public class jpanelSesion extends JPanel{
 		ncontra.setBounds(20,150,155,30);
 		contra.setBounds(20,190,155,30);
 		ok.setBounds(67,240,60,30);
+		mensaje.setBounds(20,290,165,50);
 		
-		add(sesion);add(nusuario);add(usuario);add(ncontra);add(contra);add(ok);
+		mensaje.setVisible(false);
+		mensaje.setHorizontalAlignment(JLabel.CENTER);
+		
+		add(sesion);add(nusuario);add(usuario);add(ncontra);add(contra);add(ok);add(mensaje);
 
 	}
 }

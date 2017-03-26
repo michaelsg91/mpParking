@@ -2,6 +2,7 @@ package vista;
 import javax.swing.*;
 import java.awt.*;
 import controlador.*;
+import modelo.*;
 
 public class marcoPrincipal extends JFrame{
 	public jpanelMenu jpMenu;
@@ -12,18 +13,29 @@ public class marcoPrincipal extends JFrame{
 	public jpanelIngresos jpIngresos;
 	public jpanelUsuario jpUsuario;
 	public jpanelTarCamp jpTarCamp;
-	private botonesMenu bMenu;
-	private botonSesion bSesion;
 	private JPanel jp;
+	
+	private botonSesion bSesion;
+	private botonesMenu bMenu;	
+	
+	public inicioSesion iSesion;
 	public marcoPrincipal(){
-		jpMenu=new jpanelMenu();
-		jpSesion=new jpanelSesion();
 		jpCampos=new jpanelCampos();
 		jpRecibo=new jpanelRecibo();
 		jpFactura=new jpanelFactura();
 		jpIngresos=new jpanelIngresos();
 		jpUsuario=new jpanelUsuario();
 		jpTarCamp=new jpanelTarCamp();
+		
+		//--- Controlador ----------
+		jpMenu=new jpanelMenu();
+		jpSesion=new jpanelSesion();
+		
+		
+		//--- Modelo ---------------
+		iSesion=new inicioSesion();
+		
+		
 		
 		jp=new JPanel();
 		jp.setPreferredSize(new Dimension(560,360));
@@ -76,7 +88,7 @@ public class marcoPrincipal extends JFrame{
 		
 		setLocationRelativeTo(null);
 		
-		
+		//--- Events ------------------------------
 		jpMenu.recibo.addActionListener(bMenu);
 		jpMenu.factura.addActionListener(bMenu);
 		jpMenu.ingresos.addActionListener(bMenu);
