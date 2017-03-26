@@ -4,6 +4,7 @@ import java.awt.*;
 
 public class marcoPrincipal extends JFrame{
 	private jpanelMenu jpMenu;
+	private jpanelSesion jpSesion;
 	private jpanelCampos jpCampos;
 	private jpanelRecibo jpRecibo;
 	private jpanelFactura jpFactura;
@@ -12,6 +13,7 @@ public class marcoPrincipal extends JFrame{
 	private jpanelTarCamp jpTarCamp;
 	public marcoPrincipal(){
 		jpMenu=new jpanelMenu();
+		jpSesion=new jpanelSesion();
 		jpCampos=new jpanelCampos();
 		jpRecibo=new jpanelRecibo();
 		jpFactura=new jpanelFactura();
@@ -23,6 +25,8 @@ public class marcoPrincipal extends JFrame{
 		setResizable(false);
 		
 		add(jpMenu,BorderLayout.WEST);
+		pack();
+		add(jpSesion,BorderLayout.WEST);
 		pack();
 		
 		add(jpRecibo,BorderLayout.CENTER);
@@ -41,7 +45,8 @@ public class marcoPrincipal extends JFrame{
 		
 		
 		setLocationRelativeTo(null);
-		
+
+		jpMenu.setVisible(false);
 		jpRecibo.setVisible(false);
 		jpFactura.setVisible(false);
 		jpIngresos.setVisible(false);
