@@ -9,6 +9,7 @@ public class inicioSesion {
 	private final String sql="select idUsuario from usuarios where usuario=? and contra=?";
 	private final String sql2="select contra,habilitado from usuarios where usuario=?";
 	private final String sql3="update usuarios set enLinea=1 where idUsuario=?";
+	private final String sql4="update usuarios set enLinea=0 where idUsuario=?";
 	private Connection conecta;
 	public boolean b;
 	private String contra,habilitado,id;
@@ -53,6 +54,17 @@ public class inicioSesion {
 			JOptionPane.showMessageDialog(null, "Error inicioSesion");
 		}
 		return b;
+	}
+	
+	public void cerrarSesion(){
+		conecta=conexion.getConexion();
+		try{
+			pst=conecta.prepareStatement(sql4);
+			pst.setString(1, id);
+			pst.executeUpdate();
+		}catch(SQLException e){
+			JOptionPane.showMessageDialog(null, "Error inicioSesion");
+		}
 	}
 
 }

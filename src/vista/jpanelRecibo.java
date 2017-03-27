@@ -83,8 +83,8 @@ public class jpanelRecibo extends JPanel implements Runnable{
 	public void fechahora(){
 		 cal = Calendar.getInstance();
 		 fecha = cal.getTime();
-		 sm = new SimpleDateFormat("yyyy-MM-dd");
-		 sm2 = new SimpleDateFormat("HH:mm");
+		 sm = new SimpleDateFormat("yyyy - MM - dd");
+		 sm2 = new SimpleDateFormat("HH : mm");
 	 }
 	
 	public void run(){

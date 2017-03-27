@@ -38,6 +38,7 @@ public class botonesMenu implements ActionListener{
 			marco.jpTarCamp.setVisible(false);
 			marco.jpMenu.setVisible(false);
 			marco.jpSesion.setVisible(true);
+			marco.iSesion.cerrarSesion();
 		}
 		if(e.getSource().equals(marco.jpMenu.confTarCamp)){
 			marco.jpRecibo.setVisible(false);

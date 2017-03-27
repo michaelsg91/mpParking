@@ -15,10 +15,18 @@ public class marcoPrincipal extends JFrame{
 	public jpanelTarCamp jpTarCamp;
 	private JPanel jp;
 	
+
+	//--- Controlador ----------
 	private botonSesion bSesion;
-	private botonesMenu bMenu;	
-	
+	private botonesMenu bMenu;
+	private combosRecibo cRecibo;
+
+	//--- Modelo ---------------
 	public inicioSesion iSesion;
+	public cargaTipoVehiculo cTipoVeh;
+	public cargaTipoTarifa cTipoTar;
+	public cargaMarca cMarca;
+	
 	public marcoPrincipal(){
 		jpCampos=new jpanelCampos();
 		jpRecibo=new jpanelRecibo();
@@ -26,22 +34,25 @@ public class marcoPrincipal extends JFrame{
 		jpIngresos=new jpanelIngresos();
 		jpUsuario=new jpanelUsuario();
 		jpTarCamp=new jpanelTarCamp();
-		
-		//--- Controlador ----------
 		jpMenu=new jpanelMenu();
 		jpSesion=new jpanelSesion();
 		
+		//--- Controlador ----------
+		bMenu=new botonesMenu(this);
+		bSesion=new botonSesion(this);
+		cRecibo=new combosRecibo(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
-		
+		cTipoVeh=new cargaTipoVehiculo();
+		cTipoTar=new cargaTipoTarifa();
+		cMarca=new cargaMarca();
 		
 		
 		jp=new JPanel();
 		jp.setPreferredSize(new Dimension(560,360));
 		
-		bMenu=new botonesMenu(this);
-		bSesion=new botonSesion(this);
+		
 			
 		setTitle("MP Parking");
 		setResizable(false);
@@ -87,6 +98,7 @@ public class marcoPrincipal extends JFrame{
 
 		
 		setLocationRelativeTo(null);
+		addWindowFocusListener(cRecibo);
 		
 		//--- Events ------------------------------
 		jpMenu.recibo.addActionListener(bMenu);
@@ -97,7 +109,7 @@ public class marcoPrincipal extends JFrame{
 		jpMenu.confUsu.addActionListener(bMenu);
 		
 		jpSesion.ok.addActionListener(bSesion);
-		
+		jpRecibo.tipoveh.addActionListener(cRecibo);
 		
 
 		
