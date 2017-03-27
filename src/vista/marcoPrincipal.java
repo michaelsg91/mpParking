@@ -19,13 +19,15 @@ public class marcoPrincipal extends JFrame{
 	//--- Controlador ----------
 	private botonSesion bSesion;
 	private botonesMenu bMenu;
-	private combosRecibo cRecibo;
+	private combosPrincipales cRecibo;
+	private botonTarifa bTarifa;
 
 	//--- Modelo ---------------
 	public inicioSesion iSesion;
 	public cargaTipoVehiculo cTipoVeh;
 	public cargaTipoTarifa cTipoTar;
 	public cargaMarca cMarca;
+	public cargaTarifa cTarifa;
 	
 	public marcoPrincipal(){
 		jpCampos=new jpanelCampos();
@@ -40,14 +42,15 @@ public class marcoPrincipal extends JFrame{
 		//--- Controlador ----------
 		bMenu=new botonesMenu(this);
 		bSesion=new botonSesion(this);
-		cRecibo=new combosRecibo(this);
+		cRecibo=new combosPrincipales(this);
+		bTarifa=new botonTarifa(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
 		cTipoVeh=new cargaTipoVehiculo();
 		cTipoTar=new cargaTipoTarifa();
 		cMarca=new cargaMarca();
-		
+		cTarifa=new cargaTarifa();
 		
 		jp=new JPanel();
 		jp.setPreferredSize(new Dimension(560,360));
@@ -110,6 +113,9 @@ public class marcoPrincipal extends JFrame{
 		
 		jpSesion.ok.addActionListener(bSesion);
 		jpRecibo.tipoveh.addActionListener(cRecibo);
+		jpTarCamp.ok.addActionListener(bTarifa);
+		jpTarCamp.tarifa.addActionListener(bTarifa);
+		jpTarCamp.vehiculo.addActionListener(bTarifa);
 		
 
 		

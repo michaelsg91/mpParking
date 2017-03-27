@@ -3,10 +3,10 @@ import java.awt.event.*;
 import vista.*;
 import java.sql.*;
 
-public class combosRecibo extends WindowAdapter implements ActionListener{
+public class combosPrincipales extends WindowAdapter implements ActionListener{
 	marcoPrincipal mp;
 	private String tipoVeh;
-	public combosRecibo(marcoPrincipal mp){
+	public combosPrincipales(marcoPrincipal mp){
 		this.mp=mp;
 	}
 	public void windowGainedFocus(WindowEvent e){
@@ -14,12 +14,16 @@ public class combosRecibo extends WindowAdapter implements ActionListener{
 		mp.cTipoTar.consulta();
 		mp.jpRecibo.tipoveh.removeAllItems();
 		mp.jpRecibo.tarifa.removeAllItems();
+		mp.jpTarCamp.vehiculo.removeAllItems();
+		mp.jpTarCamp.tarifa.removeAllItems();
 		try{
 			while(mp.cTipoVeh.rs.next()){
 				mp.jpRecibo.tipoveh.addItem(mp.cTipoVeh.rs.getString(1));
+				mp.jpTarCamp.vehiculo.addItem(mp.cTipoVeh.rs.getString(1));
 			}
 			while(mp.cTipoTar.rs.next()){
 				mp.jpRecibo.tarifa.addItem(mp.cTipoTar.rs.getString(1));
+				mp.jpTarCamp.tarifa.addItem(mp.cTipoTar.rs.getString(1));
 			}
 		
 		}catch(SQLException ex){
