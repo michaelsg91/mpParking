@@ -37,7 +37,6 @@ public class cargaTarifa {
 	}
 	
 	public void actualiza(String valor){
-		//System.out.println(idVeh + "  " + idTar + " " + valor);
 		conecta=conexion.getConexion();
 		try{
 			pst=conecta.prepareStatement(sql3);
