@@ -76,6 +76,7 @@ public class jpanelUsuario extends JPanel{
 		
 		ver.setBounds(10, 320, 60, 30);
 		
+		editar.setEnabled(false);
 		
 		panel.add(nusuario);panel.add(usuario);panel.add(ncontra);panel.add(contra);panel.add(registrar);	
 		panel2.add(buscar);panel2.add(nbuscar);panel2.add(neusuario);panel2.add(necontra);panel2.add(nehabilitado);

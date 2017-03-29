@@ -22,6 +22,7 @@ public class marcoPrincipal extends JFrame{
 	private accionVentana cRecibo;
 	private botonTarifa bTarifa;
 	private botonCampos bCampos;
+	private botonesUsuarios bUsuarios;
 
 	//--- Modelo ---------------
 	public inicioSesion iSesion;
@@ -30,6 +31,7 @@ public class marcoPrincipal extends JFrame{
 	public cargaMarca cMarca;
 	public cargaTarifa cTarifa;
 	public cargaCampos cCampos;
+	public cargaUsuarios cUsuarios;
 	
 	public marcoPrincipal(){
 		jpCampos=new jpanelCampos();
@@ -47,6 +49,7 @@ public class marcoPrincipal extends JFrame{
 		cRecibo=new accionVentana(this);
 		bTarifa=new botonTarifa(this);
 		bCampos=new botonCampos(this);
+		bUsuarios=new botonesUsuarios(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
@@ -55,6 +58,7 @@ public class marcoPrincipal extends JFrame{
 		cMarca=new cargaMarca();
 		cTarifa=new cargaTarifa();
 		cCampos=new cargaCampos();
+		cUsuarios=new cargaUsuarios();
 		
 		jp=new JPanel();
 		jp.setPreferredSize(new Dimension(560,360));
@@ -122,6 +126,11 @@ public class marcoPrincipal extends JFrame{
 		jpTarCamp.vehiculo.addActionListener(bTarifa);
 		
 		jpTarCamp.ok2.addActionListener(bCampos);
+		
+		jpUsuario.buscar.addActionListener(bUsuarios);
+		jpUsuario.registrar.addActionListener(bUsuarios);
+		jpUsuario.editar.addActionListener(bUsuarios);
+		jpUsuario.ver.addActionListener(bUsuarios);
 
 		
 	}
