@@ -100,9 +100,7 @@ public class cargaFactura {
 				while(rs.next()){
 					valorMin=rs.getDouble(1);
 				}
-				
-				System.out.println("valor minutos " + valorMin);
-				
+								
 				if(horas<0 || minutos<0){
 					valorMin=valorMin*-1;
 				}

@@ -17,22 +17,27 @@ public class botonIngresos implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		if(e.getSource().equals(mp.jpIngresos.vehiculo) && mp.jpIngresos.vehiculo!=null){
+		if(e.getSource().equals(mp.jpIngresos.vehiculo)){
+			
+			
 			tipoVeh=(String)mp.jpIngresos.vehiculo.getSelectedItem();
 			
-			
-			mp.cIngresos.recibeTipo(tipoVeh);
-			mp.cIngresos.consulta();
-			
-			try{
-				mp.jpIngresos.placa.removeAllItems();
-				mp.jpIngresos.placa.addItem("Todas");
-				while(mp.cIngresos.rs.next()){
-					mp.jpIngresos.placa.addItem(mp.cIngresos.rs.getString(1));
+			if(tipoVeh!=null){
+				mp.cIngresos.recibeTipo(tipoVeh);
+				mp.cIngresos.consulta();
+				
+				try{
+					mp.jpIngresos.placa.removeAllItems();
+					mp.jpIngresos.placa.addItem("Todas");
+					while(mp.cIngresos.rs3.next()){
+						mp.jpIngresos.placa.addItem(mp.cIngresos.rs3.getString(1));
+					}
+				}catch(Exception el){
+					JOptionPane.showMessageDialog(null, "Error: botonIngresos"+el.getMessage());
 				}
-			}catch(Exception el){
-				JOptionPane.showMessageDialog(null, "Error: botonIngresos"+el.getMessage());
 			}
+			
+			
 		}
 		
 		if(e.getSource().equals(mp.jpIngresos.ok)){

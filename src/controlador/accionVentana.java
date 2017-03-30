@@ -14,6 +14,7 @@ public class accionVentana extends WindowAdapter implements ActionListener{
 		mp.cTipoTar.consulta();
 		mp.cCampos.consulta();
 		mp.cFactura.consulta();
+		mp.cCampos.disponibles();
 		mp.jpTarCamp.auto.setText(mp.cCampos.cantVeh);
 		mp.jpTarCamp.moto.setText(mp.cCampos.cantMot);
 		mp.jpRecibo.tipoveh.removeAllItems();
@@ -24,6 +25,7 @@ public class accionVentana extends WindowAdapter implements ActionListener{
 		mp.jpIngresos.vehiculo.removeAllItems();
 		
 		mp.jpIngresos.vehiculo.addItem("Ambos");
+		
 		try{
 			while(mp.cTipoVeh.rs.next()){
 				mp.jpRecibo.tipoveh.addItem(mp.cTipoVeh.rs.getString(1));
@@ -37,15 +39,22 @@ public class accionVentana extends WindowAdapter implements ActionListener{
 			while(mp.cFactura.rs2.next()){
 				mp.jpFactura.recibo.addItem(mp.cFactura.rs2.getString(1));				
 			}
-		
+			
 		}catch(SQLException ex){
 			
+		}
+		
+		mp.jpCampos.cantcarr.setText(""+mp.cCampos.dispAutos);
+		mp.jpCampos.cantmot.setText(""+mp.cCampos.dispMotos);
+		if(mp.cCampos.dispAutos==0 && mp.cCampos.dispMotos==0){
+			mp.jpMenu.recibo.setEnabled(false);
+		}else{
+			mp.jpMenu.recibo.setEnabled(true);
 		}
 	}
 	
 	public void windowClosing(WindowEvent e){
 		mp.iSesion.cerrarSesion();
-		System.out.println("Cerraste la ventana");
 	}
 	
 	public void actionPerformed(ActionEvent e){

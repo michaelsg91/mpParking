@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class cargaIngresos{
 	private conexion conexion;
-	public ResultSet rs;
+	public ResultSet rs,rs2,rs3;
 	private PreparedStatement pst;
 	private Connection conecta;
 	private final String sql="select distinctrow idVeh from factura,recibo where factura.idRecibo=recibo.idRecibo";
@@ -29,9 +29,9 @@ public class cargaIngresos{
 		try{
 			pst=conecta.prepareStatement(sql3);
 			pst.setString(1, tipoVeh);
-			rs=pst.executeQuery();
+			rs2=pst.executeQuery();
 			
-			while(rs.next()){
+			while(rs2.next()){
 				this.tipoVeh=rs.getString(1);
 			}
 		}catch(Exception e){
@@ -47,11 +47,11 @@ public class cargaIngresos{
 		try{
 			if(tipoVeh.equals("Ambos")){
 				pst=conecta.prepareStatement(sql);
-				rs=pst.executeQuery();
+				rs3=pst.executeQuery();
 			}else{
 				pst=conecta.prepareStatement(sql2);
 				pst.setString(1, tipoVeh);
-				rs=pst.executeQuery();
+				rs3=pst.executeQuery();
 			}
 		}catch(SQLException e){
 			JOptionPane.showMessageDialog(null, "Error: cargaIngresos " + e.getMessage());
