@@ -25,6 +25,8 @@ public class botonRecibo implements ActionListener{
 			if(marca.equals("---  Selecciona  ---"))marca=null;
 			
 			mp.iRecibo.ingresa(idVeh, idUsu, tipoTar, tipoVeh, fecha, hora, marca, idCliente);
+			mp.jpRecibo.placa.setText("");
+			mp.jpRecibo.cliente.setText("");
 		}else{
 			JOptionPane.showMessageDialog(null, "Ingrese la placa del vehículo");
 		}

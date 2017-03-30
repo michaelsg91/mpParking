@@ -26,6 +26,7 @@ public class marcoPrincipal extends JFrame{
 	private botonRecibo bRecibo;
 	private comboFactura comFactura;
 	private botonIngresos bIngresos;
+	private teclaEnter tEnter;
 
 	//--- Modelo ---------------
 	public inicioSesion iSesion;
@@ -59,6 +60,7 @@ public class marcoPrincipal extends JFrame{
 		bRecibo=new botonRecibo(this);
 		comFactura=new comboFactura(this);
 		bIngresos=new botonIngresos(this);
+		tEnter=new teclaEnter(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
@@ -152,6 +154,28 @@ public class marcoPrincipal extends JFrame{
 		
 		jpIngresos.ok.addActionListener(bIngresos);
 		jpIngresos.vehiculo.addActionListener(bIngresos);
+		
+		jpSesion.usuario.addKeyListener(tEnter);
+		jpSesion.contra.addKeyListener(tEnter);
+		
+		jpRecibo.placa.addKeyListener(tEnter);
+		jpRecibo.cliente.addKeyListener(tEnter);
+		
+		jpTarCamp.valor.addKeyListener(tEnter);
+		
+		jpTarCamp.moto.addKeyListener(tEnter);
+		jpTarCamp.auto.addKeyListener(tEnter);
+		
+		jpUsuario.usuario.addKeyListener(tEnter);
+		jpUsuario.contra.addKeyListener(tEnter);
+		
+		jpUsuario.nbuscar.addKeyListener(tEnter);
+		
+		jpUsuario.eusuario.addKeyListener(tEnter);
+		jpUsuario.econtra.addKeyListener(tEnter);
+		jpUsuario.ehabilitado.addKeyListener(tEnter);
+		
+	
 
 		
 	}
