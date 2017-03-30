@@ -45,7 +45,6 @@ public class cargaCampos{
 			pst.setString(1, mot);
 			pst.executeUpdate();
 			JOptionPane.showMessageDialog(null, "Datos actualizados correctamente");
-			
 		}catch(SQLException e){
 			JOptionPane.showMessageDialog(null, "El valor ingresado es incorrecto");
 		}

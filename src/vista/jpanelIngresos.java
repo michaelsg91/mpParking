@@ -24,9 +24,9 @@ public class jpanelIngresos extends JPanel{
 		nsubtotal=new JLabel("Subtotal");
 		niva=new JLabel("IVA");
 		nvehiculo=new JLabel("Tipo de Vehiculo");
-		subtotal=new JLabel("15999");		
-		iva=new JLabel("12455");
-		total=new JLabel("399993910");
+		subtotal=new JLabel("");		
+		iva=new JLabel("");
+		total=new JLabel("");
 		
 		vehiculo=new JComboBox();
 		placa=new JComboBox();

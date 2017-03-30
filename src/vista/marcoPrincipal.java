@@ -23,6 +23,9 @@ public class marcoPrincipal extends JFrame{
 	private botonTarifa bTarifa;
 	private botonCampos bCampos;
 	private botonesUsuarios bUsuarios;
+	private botonRecibo bRecibo;
+	private comboFactura comFactura;
+	private botonIngresos bIngresos;
 
 	//--- Modelo ---------------
 	public inicioSesion iSesion;
@@ -32,6 +35,9 @@ public class marcoPrincipal extends JFrame{
 	public cargaTarifa cTarifa;
 	public cargaCampos cCampos;
 	public cargaUsuarios cUsuarios;
+	public ingresaRecibo iRecibo;
+	public cargaFactura cFactura;
+	public cargaIngresos cIngresos;
 	
 	public marcoPrincipal(){
 		jpCampos=new jpanelCampos();
@@ -50,6 +56,9 @@ public class marcoPrincipal extends JFrame{
 		bTarifa=new botonTarifa(this);
 		bCampos=new botonCampos(this);
 		bUsuarios=new botonesUsuarios(this);
+		bRecibo=new botonRecibo(this);
+		comFactura=new comboFactura(this);
+		bIngresos=new botonIngresos(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
@@ -59,6 +68,9 @@ public class marcoPrincipal extends JFrame{
 		cTarifa=new cargaTarifa();
 		cCampos=new cargaCampos();
 		cUsuarios=new cargaUsuarios();
+		iRecibo=new ingresaRecibo();
+		cFactura=new cargaFactura();
+		cIngresos=new cargaIngresos();
 		
 		jp=new JPanel();
 		jp.setPreferredSize(new Dimension(560,360));
@@ -110,6 +122,7 @@ public class marcoPrincipal extends JFrame{
 		
 		setLocationRelativeTo(null);
 		addWindowFocusListener(cRecibo);
+		addWindowListener(cRecibo);
 		
 		//--- Events ------------------------------
 		jpMenu.recibo.addActionListener(bMenu);
@@ -131,6 +144,14 @@ public class marcoPrincipal extends JFrame{
 		jpUsuario.registrar.addActionListener(bUsuarios);
 		jpUsuario.editar.addActionListener(bUsuarios);
 		jpUsuario.ver.addActionListener(bUsuarios);
+		
+		jpRecibo.ok.addActionListener(bRecibo);
+		
+		jpFactura.recibo.addActionListener(comFactura);
+		jpFactura.ok.addActionListener(comFactura);
+		
+		jpIngresos.ok.addActionListener(bIngresos);
+		jpIngresos.vehiculo.addActionListener(bIngresos);
 
 		
 	}

@@ -27,9 +27,9 @@ public class jpanelFactura extends JPanel implements Runnable{
 		nsubtotal=new JLabel("Subtotal:");
 		niva=new JLabel("IVA (19%):");
 		ntotal=new JLabel("Total:");
-		subtotal=new JLabel("2342344");
-		iva=new JLabel("23444");
-		total=new JLabel("23423424");
+		subtotal=new JLabel("");
+		iva=new JLabel("");
+		total=new JLabel("");
 		hilo=new Thread(this);
 		recibo=new JComboBox();
 		ok=new JButton("OK");

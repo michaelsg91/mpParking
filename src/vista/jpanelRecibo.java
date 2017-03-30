@@ -26,9 +26,9 @@ public class jpanelRecibo extends JPanel implements Runnable{
 		opcional=new JLabel("Campos opcionales:");
 		ntarifa=new JLabel("Tarifa");
 		nfentrada=new JLabel("Fecha de entrada");
-		fentrada=new JLabel("2017-03-18");
+		fentrada=new JLabel("");
 		nhentrada=new JLabel("Hora de entrada");
-		hentrada=new JLabel("12:23");
+		hentrada=new JLabel("");
 		ntipoveh=new JLabel("Tipo de vehículo");
 		nmarca=new JLabel("Marca");
 		ncliente=new JLabel("Id cliente");
@@ -83,8 +83,8 @@ public class jpanelRecibo extends JPanel implements Runnable{
 	public void fechahora(){
 		 cal = Calendar.getInstance();
 		 fecha = cal.getTime();
-		 sm = new SimpleDateFormat("yyyy - MM - dd");
-		 sm2 = new SimpleDateFormat("HH : mm");
+		 sm = new SimpleDateFormat("yyyy-MM-dd");
+		 sm2 = new SimpleDateFormat("HH:mm");
 	 }
 	
 	public void run(){

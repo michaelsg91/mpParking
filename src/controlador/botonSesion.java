@@ -5,33 +5,42 @@ import javax.swing.*;
 import modelo.*;
 
 public class botonSesion implements ActionListener{
-	marcoPrincipal marco;
+	marcoPrincipal mp;
 	private String usu, contra;
 	private boolean b;
-	public botonSesion(marcoPrincipal marco){
-		this.marco=marco;
+	public botonSesion(marcoPrincipal mp){
+		this.mp=mp;
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		if(!marco.jpSesion.usuario.getText().isEmpty() && !marco.jpSesion.contra.getText().isEmpty()){
-			usu=marco.jpSesion.usuario.getText();
-			contra=marco.jpSesion.contra.getText();
+		if(!mp.jpSesion.usuario.getText().isEmpty() && !mp.jpSesion.contra.getText().isEmpty()){
+			usu=mp.jpSesion.usuario.getText();
+			contra=mp.jpSesion.contra.getText();
 			
-			b=marco.iSesion.comprobar(usu, contra);
+			b=mp.iSesion.comprobar(usu, contra);
 			
 			if(b){
-				marco.jpMenu.setVisible(true);
-				marco.jpSesion.setVisible(false);
-				marco.jpSesion.mensaje.setVisible(false);
-				marco.jpSesion.usuario.setText("");
-				marco.jpSesion.contra.setText("");
+				mp.jpMenu.setVisible(true);
+				mp.jpSesion.setVisible(false);
+				mp.jpSesion.mensaje.setVisible(false);
+				mp.jpSesion.usuario.setText("");
+				mp.jpSesion.contra.setText("");
+				if(mp.iSesion.online.equals("1")){
+					mp.jpMenu.confUsu.setVisible(true);
+					mp.jpMenu.confTarCamp.setVisible(true);
+					mp.jpMenu.configurar.setVisible(true);
+				}else{
+					mp.jpMenu.confUsu.setVisible(false);
+					mp.jpMenu.confTarCamp.setVisible(false);
+					mp.jpMenu.configurar.setVisible(false);
+				}
 			}else{
-				marco.jpSesion.mensaje.setText("<html><p align='center'>Usuario o</p><p align='center'>contraseña invalido</p></html>");
-				marco.jpSesion.mensaje.setVisible(true);
+				mp.jpSesion.mensaje.setText("<html><p align='center'>Usuario o</p><p align='center'>contraseña invalido</p></html>");
+				mp.jpSesion.mensaje.setVisible(true);
 			}
 		}else{
-			marco.jpSesion.mensaje.setText("<html><p align='center'>Rellene los</p><p align='center'>campos requeridos</p></html>");
-			marco.jpSesion.mensaje.setVisible(true);
+			mp.jpSesion.mensaje.setText("<html><p align='center'>Rellene los</p><p align='center'>campos requeridos</p></html>");
+			mp.jpSesion.mensaje.setVisible(true);
 		}
 		
 		
