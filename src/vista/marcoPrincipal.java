@@ -27,6 +27,7 @@ public class marcoPrincipal extends JFrame{
 	private comboFactura comFactura;
 	private botonIngresos bIngresos;
 	private teclaEnter tEnter;
+	private validacionCajas vCajas;
 
 	//--- Modelo ---------------
 	public inicioSesion iSesion;
@@ -61,6 +62,7 @@ public class marcoPrincipal extends JFrame{
 		comFactura=new comboFactura(this);
 		bIngresos=new botonIngresos(this);
 		tEnter=new teclaEnter(this);
+		vCajas=new validacionCajas(this);
 		
 		//--- Modelo ---------------
 		iSesion=new inicioSesion();
@@ -175,8 +177,26 @@ public class marcoPrincipal extends JFrame{
 		jpUsuario.econtra.addKeyListener(tEnter);
 		jpUsuario.ehabilitado.addKeyListener(tEnter);
 		
-	
-
+		jpSesion.usuario.addKeyListener(vCajas);
+		jpSesion.contra.addKeyListener(vCajas);
+		
+		jpRecibo.placa.addKeyListener(vCajas);
+		jpRecibo.cliente.addKeyListener(vCajas);
+		
+		jpTarCamp.valor.addKeyListener(vCajas);
+		
+		jpTarCamp.moto.addKeyListener(vCajas);
+		jpTarCamp.auto.addKeyListener(vCajas);
+		
+		jpUsuario.usuario.addKeyListener(vCajas);
+		jpUsuario.contra.addKeyListener(vCajas);
+		
+		jpUsuario.nbuscar.addKeyListener(vCajas);
+		
+		jpUsuario.eusuario.addKeyListener(vCajas);
+		jpUsuario.econtra.addKeyListener(vCajas);
+		jpUsuario.ehabilitado.addKeyListener(vCajas);
+		
 		
 	}
 }
