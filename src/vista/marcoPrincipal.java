@@ -177,6 +177,8 @@ public class marcoPrincipal extends JFrame{
 		jpUsuario.econtra.addKeyListener(tEnter);
 		jpUsuario.ehabilitado.addKeyListener(tEnter);
 		
+		jpFactura.total.addKeyListener(tEnter);
+		
 		jpSesion.usuario.addKeyListener(vCajas);
 		jpSesion.contra.addKeyListener(vCajas);
 		
@@ -196,6 +198,8 @@ public class marcoPrincipal extends JFrame{
 		jpUsuario.eusuario.addKeyListener(vCajas);
 		jpUsuario.econtra.addKeyListener(vCajas);
 		jpUsuario.ehabilitado.addKeyListener(vCajas);
+		
+		jpFactura.total.addKeyListener(vCajas);
 		
 		
 	}

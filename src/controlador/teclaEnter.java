@@ -33,6 +33,9 @@ public class teclaEnter extends KeyAdapter{
 			if(mp.jpUsuario.eusuario.isFocusOwner() || mp.jpUsuario.econtra.isFocusOwner() || mp.jpUsuario.ehabilitado.isFocusOwner()){
 				mp.jpUsuario.editar.doClick();
 			}
+			if(mp.jpFactura.total.isFocusOwner()){
+				mp.jpFactura.ok.doClick();
+			}
 
 		}
 		

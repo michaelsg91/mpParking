@@ -55,6 +55,10 @@ public class validacionCajas extends KeyAdapter{
 			if((c<'0' || c>'9') && c!='.')e.consume();
 			if(mp.jpTarCamp.valor.getText().length()==15)e.consume();
 		}
+		if(mp.jpFactura.total.isFocusOwner()){
+			if((c<'0' || c>'9') && c!='.')e.consume();
+			if(mp.jpFactura.total.getText().length()==15)e.consume();
+		}
 		if(mp.jpTarCamp.moto.isFocusOwner()){
 			if((c<'0' || c>'9') && c!='.')e.consume();
 			if(mp.jpTarCamp.moto.getText().length()==6)e.consume();

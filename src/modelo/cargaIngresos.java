@@ -32,7 +32,7 @@ public class cargaIngresos{
 			rs2=pst.executeQuery();
 			
 			while(rs2.next()){
-				this.tipoVeh=rs.getString(1);
+				this.tipoVeh=rs2.getString(1);
 			}
 		}catch(Exception e){
 			JOptionPane.showMessageDialog(null, "Error: cargaIngresos rec" + e.getMessage());

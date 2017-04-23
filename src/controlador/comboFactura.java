@@ -37,7 +37,7 @@ public class comboFactura implements ActionListener{
 			total=mp.jpFactura.total.getText();
 			idUsuario=mp.iSesion.online;
 			
-			mp.cFactura.ingresa(idRecibo, idUsuario, subtotal, iva, subtotal);
+			mp.cFactura.ingresa(idRecibo, idUsuario, subtotal, iva, total);
 		}
 	}
 }

@@ -20,6 +20,7 @@ public class cargaFactura {
 	public String idTipoTar,fechaEntrada,horaEntrada,idTipoVeh,diferenciaMin;
 	public Double tarifa,valorDia,valorMin,subtotal,total,iva;
 	public int horas,minutos;
+	private double tot;
 	public cargaFactura(){
 		conexion=new conexion();
 	}
@@ -38,6 +39,7 @@ public class cargaFactura {
 	public void ingresa(String idRecibo,String idUsuario,String subtotal,String iva,String total){
 		
 		try{
+			tot=Double.parseDouble(total);
 			conecta=conexion.getConexion();
 			pst=conecta.prepareStatement(sql9);
 			pst.setString(1, idRecibo);
@@ -50,6 +52,8 @@ public class cargaFactura {
 			JOptionPane.showMessageDialog(null, "La factura ha sido registrada con éxito");
 		}catch(SQLException e){
 			JOptionPane.showMessageDialog(null, "No hay elementos para regitrar");
+		}catch(NumberFormatException e){
+			JOptionPane.showMessageDialog(null, "Valor total no válido");
 		}
 	}
 	

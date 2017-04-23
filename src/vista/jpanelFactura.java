@@ -5,7 +5,8 @@ import java.util.*;
 import javax.swing.*;
 
 public class jpanelFactura extends JPanel implements Runnable{
-	public JLabel nrecibo,nfsalida,nhsalida,fsalida,hsalida,nsubtotal,niva,ntotal,subtotal,iva,total;
+	public JLabel nrecibo,nfsalida,nhsalida,fsalida,hsalida,nsubtotal,niva,ntotal,subtotal,iva;
+	public JTextField total;
 	public JComboBox recibo;
 	public JButton ok;
 	private Thread hilo;
@@ -29,7 +30,7 @@ public class jpanelFactura extends JPanel implements Runnable{
 		ntotal=new JLabel("Total:");
 		subtotal=new JLabel("");
 		iva=new JLabel("");
-		total=new JLabel("");
+		total=new JTextField("");
 		hilo=new Thread(this);
 		recibo=new JComboBox();
 		ok=new JButton("OK");
@@ -53,7 +54,7 @@ public class jpanelFactura extends JPanel implements Runnable{
 		iva.setBounds(340,180,150,30);
 
 		ntotal.setBounds(30,240,70,30);		
-		total.setBounds(110, 240, 150, 30);
+		total.setBounds(110, 240, 120, 30);
 		
 		ok.setBounds(250,300,60,30);
 		

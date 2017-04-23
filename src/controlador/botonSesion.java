@@ -29,10 +29,12 @@ public class botonSesion implements ActionListener{
 					mp.jpMenu.confUsu.setVisible(true);
 					mp.jpMenu.confTarCamp.setVisible(true);
 					mp.jpMenu.configurar.setVisible(true);
+					mp.jpFactura.total.setEditable(true);
 				}else{
 					mp.jpMenu.confUsu.setVisible(false);
 					mp.jpMenu.confTarCamp.setVisible(false);
 					mp.jpMenu.configurar.setVisible(false);
+					mp.jpFactura.total.setEditable(false);
 				}
 			}else{
 				mp.jpSesion.mensaje.setText("<html><p align='center'>Usuario o</p><p align='center'>contraseña invalido</p></html>");
