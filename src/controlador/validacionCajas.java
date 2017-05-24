@@ -5,7 +5,6 @@ import vista.*;
 public class validacionCajas extends KeyAdapter{
 	marcoPrincipal mp;
 	private char c;
-	private int b=0;
 	public validacionCajas(marcoPrincipal mp){
 		this.mp=mp;
 	}
