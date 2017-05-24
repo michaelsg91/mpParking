@@ -10,7 +10,7 @@ public class conexion {
 	}	
 	public Connection getConexion(){
 		try{
-		conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/mpParking","root","mIchael");
+		conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/mpParking","root","");
 		
 		}catch(SQLException e){
 			JOptionPane.showMessageDialog(null, "no conectado   "+ e.getMessage());
